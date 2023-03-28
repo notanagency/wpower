@@ -1,4 +1,4 @@
-<script>
+document.addEventListener("DOMContentLoaded", function() {
   // Username Value
   const valueInput = document.querySelector('input[username]');
   valueInput.addEventListener("keydown", function(e) {
@@ -21,11 +21,11 @@
   });
 
   // Convert input to lowercase
-const inputs = document.querySelectorAll('input[web-url], input[username]');
+  const inputs = document.querySelectorAll('input[web-url], input[username]');
 
-inputs.forEach(input => {
-  input.addEventListener('input', function() {
-    this.value = this.value.toLowerCase();
+  inputs.forEach(input => {
+    input.addEventListener('input', function() {
+      this.value = this.value.toLowerCase();
+    });
   });
 });
-</script>
