@@ -3,17 +3,17 @@
 
   if (formElement) {
     // Username Value
-		const valueInput = document.querySelector('input[username]');
-		valueInput.addEventListener("keydown", function(e) {
-			const nonIgnoredKeys = [
-		    "Backspace", "Delete", "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", // allowed keys
-		    "Tab", "ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "CapsLock", "MetaLeft", "MetaRight", "AltLeft", "AltRight" // ignored keys
-			 ];
-			 if (this.value === "" && nonIgnoredKeys.indexOf(e.code) === -1) { // ignore non-alphanumeric keys
-			   this.value = "@";
-				 this.setSelectionRange(1, 1);
-			 }
-		 });
+    const valueInput = document.querySelector('input[username]');
+    valueInput.addEventListener("keydown", function(e) {
+    	const nonIgnoredKeys = [
+	  "Backspace", "Delete", "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", // allowed keys
+ 	  "Tab", "ShiftLeft", "ShiftRight", "ControlLeft", "ControlRight", "CapsLock", "MetaLeft", "MetaRight", "AltLeft", "AltRight" // ignored keys
+      ];
+      if (this.value === "" && nonIgnoredKeys.indexOf(e.code) === -1) { // ignore non-alphanumeric keys
+	this.value = "@";
+        this.setSelectionRange(1, 1);
+      }
+    });
 
     // Url Value
     const urlInput = document.querySelector('input[web-url]');
